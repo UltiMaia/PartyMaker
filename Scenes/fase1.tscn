@@ -1,0 +1,134 @@
+[gd_scene load_steps=9 format=3 uid="uid://cg67cxq1fi76g"]
+
+[ext_resource type="Script" path="res://Node2D.gd" id="1_pfxrc"]
+[ext_resource type="Texture2D" uid="uid://c33ycygjcjv7n" path="res://Assets/Assets_cenario/wji3k711.bmp" id="2_uq3wf"]
+[ext_resource type="FontFile" uid="uid://ch103gi2tob72" path="res://Font/font/andina.ttf" id="3_6e8mv"]
+[ext_resource type="Texture2D" uid="uid://dlhwsdw61rf7s" path="res://Assets/Fase 1/assets-aniversario/balloon.png" id="4_tlb2a"]
+[ext_resource type="Texture2D" uid="uid://cb5dqwk17opj3" path="res://Assets/Fase 1/assets-aniversario/chair.png" id="5_gue3i"]
+[ext_resource type="Texture2D" uid="uid://c02ym1f58iju7" path="res://Assets/Fase 1/assets-aniversario/party-hat.png" id="6_l5bf3"]
+[ext_resource type="Texture2D" uid="uid://cmxupn84jk2c4" path="res://Assets/Fase 1/assets-aniversario/table.png" id="7_qtxme"]
+[ext_resource type="Texture2D" uid="uid://brw8att7ahckm" path="res://Assets/Fase 1/assets-aniversario/trampoline.png" id="8_a08x3"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_pfxrc")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+texture = ExtResource("2_uq3wf")
+expand_mode = 1
+
+[node name="Pergunta" type="Label" parent="."]
+offset_left = 7.0
+offset_top = 47.0
+offset_right = 1144.0
+offset_bottom = 239.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_6e8mv")
+theme_override_font_sizes/font_size = 50
+text = "Clique no objeto com nome"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Item" type="Label" parent="."]
+offset_left = 10.0
+offset_top = 107.0
+offset_right = 1147.0
+offset_bottom = 299.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_6e8mv")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Balloon" type="TextureButton" parent="."]
+offset_left = 59.0
+offset_top = 337.0
+offset_right = 197.0
+offset_bottom = 476.0
+texture_normal = ExtResource("4_tlb2a")
+texture_pressed = ExtResource("4_tlb2a")
+texture_hover = ExtResource("4_tlb2a")
+texture_disabled = ExtResource("4_tlb2a")
+texture_focused = ExtResource("4_tlb2a")
+stretch_mode = 0
+
+[node name="Chair" type="TextureButton" parent="."]
+offset_left = 274.0
+offset_top = 332.0
+offset_right = 412.0
+offset_bottom = 471.0
+texture_normal = ExtResource("5_gue3i")
+texture_pressed = ExtResource("5_gue3i")
+texture_hover = ExtResource("5_gue3i")
+texture_disabled = ExtResource("5_gue3i")
+texture_focused = ExtResource("5_gue3i")
+stretch_mode = 0
+
+[node name="Party Hat" type="TextureButton" parent="."]
+offset_left = 490.0
+offset_top = 331.0
+offset_right = 628.0
+offset_bottom = 470.0
+texture_normal = ExtResource("6_l5bf3")
+texture_pressed = ExtResource("6_l5bf3")
+texture_hover = ExtResource("6_l5bf3")
+texture_disabled = ExtResource("6_l5bf3")
+texture_focused = ExtResource("6_l5bf3")
+stretch_mode = 0
+
+[node name="Table" type="TextureButton" parent="."]
+offset_left = 709.0
+offset_top = 328.0
+offset_right = 847.0
+offset_bottom = 467.0
+texture_normal = ExtResource("7_qtxme")
+texture_pressed = ExtResource("7_qtxme")
+texture_hover = ExtResource("7_qtxme")
+texture_disabled = ExtResource("7_qtxme")
+texture_focused = ExtResource("7_qtxme")
+stretch_mode = 0
+
+[node name="Trampoline" type="TextureButton" parent="."]
+offset_left = 945.0
+offset_top = 330.0
+offset_right = 1083.0
+offset_bottom = 469.0
+texture_normal = ExtResource("8_a08x3")
+texture_pressed = ExtResource("8_a08x3")
+texture_hover = ExtResource("8_a08x3")
+texture_disabled = ExtResource("8_a08x3")
+texture_focused = ExtResource("8_a08x3")
+stretch_mode = 0
+
+[node name="Resposta" type="Label" parent="."]
+offset_left = 389.0
+offset_top = 546.0
+offset_right = 740.0
+offset_bottom = 609.0
+theme_override_fonts/font = ExtResource("3_6e8mv")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Vidas" type="Label" parent="."]
+offset_left = 964.0
+offset_top = 18.0
+offset_right = 1071.0
+offset_bottom = 80.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("3_6e8mv")
+theme_override_font_sizes/font_size = 30
+text = "VIDAS: "
+
+[connection signal="pressed" from="Balloon" to="." method="_on_balloon_pressed"]
+[connection signal="pressed" from="Chair" to="." method="_on_chair_pressed"]
+[connection signal="pressed" from="Party Hat" to="." method="_on_party_hat_pressed"]
+[connection signal="pressed" from="Table" to="." method="_on_table_pressed"]
+[connection signal="pressed" from="Trampoline" to="." method="_on_trampoline_pressed"]

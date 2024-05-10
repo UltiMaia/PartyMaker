@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2q37k5ewqpis"
-path="res://.godot/imported/condensed_milk.png-f5b12de92ef8136b2d806dc04329fed6.ctex"
+uid="uid://d05a6xwiihgi"
+path="res://.godot/imported/photo2pixel_download-1.png.png-3f8bd6a73a4e9b4071bc093a0e633b88.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fase 2/condensed_milk.png"
-dest_files=["res://.godot/imported/condensed_milk.png-f5b12de92ef8136b2d806dc04329fed6.ctex"]
+source_file="res://Assets/Fase 2/photo2pixel_download-1.png.png"
+dest_files=["res://.godot/imported/photo2pixel_download-1.png.png-3f8bd6a73a4e9b4071bc093a0e633b88.ctex"]
 
 [params]
 

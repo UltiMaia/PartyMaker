@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://ch103gi2tob72" path="res://Font/font/andina.ttf" id="3_6e8mv"]
 [ext_resource type="Texture2D" uid="uid://dlhwsdw61rf7s" path="res://Assets/Fase 1/assets-aniversario/balloon.png" id="4_tlb2a"]
 [ext_resource type="Texture2D" uid="uid://cb5dqwk17opj3" path="res://Assets/Fase 1/assets-aniversario/chair.png" id="5_gue3i"]
-[ext_resource type="Texture2D" uid="uid://c02ym1f58iju7" path="res://Assets/Fase 1/assets-aniversario/party-hat.png" id="6_l5bf3"]
+[ext_resource type="Texture2D" uid="uid://c02ym1f58iju7" path="res://Assets/Fase 1/assets-aniversario/party hat.png" id="6_l5bf3"]
 [ext_resource type="Texture2D" uid="uid://cmxupn84jk2c4" path="res://Assets/Fase 1/assets-aniversario/table.png" id="7_qtxme"]
 [ext_resource type="Texture2D" uid="uid://brw8att7ahckm" path="res://Assets/Fase 1/assets-aniversario/trampoline.png" id="8_a08x3"]
 
@@ -125,7 +125,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("3_6e8mv")
 theme_override_font_sizes/font_size = 30
-text = "VIDAS: "
+text = "VIDAS: 3"
 
 [connection signal="pressed" from="Balloon" to="." method="_on_balloon_pressed"]
 [connection signal="pressed" from="Chair" to="." method="_on_chair_pressed"]

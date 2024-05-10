@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxwysngt7whrw"
-path="res://.godot/imported/powdered_milk.png-8f1a6ea19df1b833c735892069eee9c7.ctex"
+uid="uid://dsqhyp6s21vab"
+path="res://.godot/imported/chocolate powder.png-76af34b009c0b5c0760bcc0f6e5d96a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fase 2/powdered_milk.png"
-dest_files=["res://.godot/imported/powdered_milk.png-8f1a6ea19df1b833c735892069eee9c7.ctex"]
+source_file="res://Assets/Fase 2/chocolate powder.png"
+dest_files=["res://.godot/imported/chocolate powder.png-76af34b009c0b5c0760bcc0f6e5d96a5.ctex"]
 
 [params]
 

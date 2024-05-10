@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byexdvu3flhpt"
-path="res://.godot/imported/pixel-art-set-presents-gifts-holidays-events-cute-bright-party-icons-vector-illustration-202858807.webp-6af965ed8b0b85ce50c9d36b792dafd7.ctex"
+uid="uid://bg11458lo6xad"
+path="res://.godot/imported/personagem_principal3.png-a1594ddf2aa0f002e1b08f39bf103c51.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pixel-art-set-presents-gifts-holidays-events-cute-bright-party-icons-vector-illustration-202858807.webp"
-dest_files=["res://.godot/imported/pixel-art-set-presents-gifts-holidays-events-cute-bright-party-icons-vector-illustration-202858807.webp-6af965ed8b0b85ce50c9d36b792dafd7.ctex"]
+source_file="res://Assets/Sprites Personagens/Personagem Principal/personagem_principal3.png"
+dest_files=["res://.godot/imported/personagem_principal3.png-a1594ddf2aa0f002e1b08f39bf103c51.ctex"]
 
 [params]
 

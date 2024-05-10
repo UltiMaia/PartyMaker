@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c68nrl188n734"]
 
-[ext_resource type="Texture2D" uid="uid://byexdvu3flhpt" path="res://pixel-art-set-presents-gifts-holidays-events-cute-bright-party-icons-vector-illustration-202858807.webp" id="1_htf4r"]
+[ext_resource type="Texture2D" uid="uid://byexdvu3flhpt" path="res://Assets/pixel-art-set-presents-gifts-holidays-events-cute-bright-party-icons-vector-illustration-202858807.webp" id="1_htf4r"]
 [ext_resource type="FontFile" uid="uid://ch103gi2tob72" path="res://Font/font/andina.ttf" id="1_u0jq6"]
 
 [node name="StartScreen" type="CanvasLayer"]

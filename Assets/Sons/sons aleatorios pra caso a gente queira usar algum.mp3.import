@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dxmpa1axvs8ov"
+path="res://.godot/imported/sons aleatorios pra caso a gente queira usar algum.mp3-d29e70f411f8bc2bdd7f8115b4ada6b0.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sons/sons aleatorios pra caso a gente queira usar algum.mp3"
+dest_files=["res://.godot/imported/sons aleatorios pra caso a gente queira usar algum.mp3-d29e70f411f8bc2bdd7f8115b4ada6b0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

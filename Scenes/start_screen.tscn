@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c68nrl188n734"]
+[gd_scene load_steps=4 format=3 uid="uid://c68nrl188n734"]
 
 [ext_resource type="Texture2D" uid="uid://byexdvu3flhpt" path="res://Assets/pixel-art-set-presents-gifts-holidays-events-cute-bright-party-icons-vector-illustration-202858807.webp" id="1_htf4r"]
 [ext_resource type="FontFile" uid="uid://ch103gi2tob72" path="res://Font/font/andina.ttf" id="1_u0jq6"]
+[ext_resource type="Texture2D" uid="uid://tlsqe83ep8fe" path="res://Assets/WhatsApp Image 2024-05-09 at 20.40.19-1.png.png" id="3_iafdl"]
 
 [node name="StartScreen" type="CanvasLayer"]
 
@@ -27,20 +28,8 @@ theme_override_constants/margin_bottom = 16
 layout_mode = 2
 theme_override_constants/separation = 100
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer1"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("1_u0jq6")
-theme_override_font_sizes/font_size = 108
-text = "PARTY
-MAKER
-"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer1"]
+custom_minimum_size = Vector2(0, 400)
 layout_mode = 2
 theme_override_constants/separation = 0
 
@@ -58,6 +47,11 @@ text = "PRESS TO PLAY"
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[node name="WhatsAppImage2024-05-09At20_40_19-1_png" type="Sprite2D" parent="."]
+position = Vector2(576, 187)
+scale = Vector2(4, 4)
+texture = ExtResource("3_iafdl")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer1/VBoxContainer2/Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/fase2.gd" id="1_73uf6"]
 [ext_resource type="Texture2D" uid="uid://h0y5xssjwgjb" path="res://Assets/Fase 2/kitchen.jpeg" id="2_s2pd2"]
 [ext_resource type="FontFile" uid="uid://ch103gi2tob72" path="res://Font/font/andina.ttf" id="3_yokr2"]
-[ext_resource type="Texture2D" uid="uid://hbfwiq3e50ri" path="res://Assets/Fase 2/photo2pixel_download-1.png-removebg-preview.png" id="4_u2b5c"]
+[ext_resource type="Texture2D" uid="uid://hbfwiq3e50ri" path="res://Assets/Fase 2/condensed milk.png" id="4_u2b5c"]
 [ext_resource type="Texture2D" uid="uid://xexxg46sap25" path="res://Assets/Fase 2/condensed_milk_opacity.png" id="5_qgppj"]
 [ext_resource type="Texture2D" uid="uid://dsqhyp6s21vab" path="res://Assets/Fase 2/chocolate powder.png" id="6_yxu1r"]
 [ext_resource type="Texture2D" uid="uid://143scykalxr8" path="res://Assets/Fase 2/butter.png" id="7_i23i3"]
@@ -51,7 +51,7 @@ theme_override_font_sizes/font_size = 50
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CondensedMilk" type="TextureButton" parent="."]
+[node name="Condensed Milk" type="TextureButton" parent="."]
 offset_left = 26.0
 offset_top = 283.0
 offset_right = 526.0
@@ -133,7 +133,7 @@ theme_override_fonts/font = ExtResource("3_yokr2")
 theme_override_font_sizes/font_size = 30
 text = "VIDAS: 3"
 
-[connection signal="pressed" from="CondensedMilk" to="." method="_on_condensed_milk_pressed"]
+[connection signal="pressed" from="Condensed Milk" to="." method="_on_condensed_milk_pressed"]
 [connection signal="pressed" from="Chocolate Powder" to="." method="_on_chocolate_powder_pressed"]
 [connection signal="pressed" from="Butter" to="." method="_on_butter_pressed"]
 [connection signal="pressed" from="Sugar" to="." method="_on_sugar_pressed"]

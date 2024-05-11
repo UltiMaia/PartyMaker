@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var condensed_milk = $CondensedMilk
+@onready var condensed_milk = $"Condensed Milk"
 @onready var chocolate_powder = $"Chocolate Powder"
 @onready var butter = $Butter
 @onready var sugar = $Sugar
@@ -74,11 +74,12 @@ func reduceButtonsOpacity():
 
 func selectItem(elementSelected: TextureButton):
 	var texture = elementSelected.name + "_selected"
-	var texturePath = "res://Assets/Fase 1/assets-aniversario/" + texture + ".png"
+	var texturePath = "res://Assets/Fase 2/" + texture + ".png"
 	elementSelected.texture_normal = ResourceLoader.load(texturePath)
 
 func unselectItem(elementSelected: TextureButton):
 	var texture = elementSelected.name 
+	print(texture)
 	var texturePath = "res://Assets/Fase 2/" + texture + ".png"
 	elementSelected.texture_normal = ResourceLoader.load(texturePath)
 
@@ -97,6 +98,9 @@ func _input(ev):
 			selectedItem = 4
 		else:
 			selectedItem -= 1
+	if Input.is_key_pressed(KEY_BACKSPACE) || Input.is_key_pressed(KEY_SPACE):
+		checkAnswer(listObjects[selectedItem])
+	
 	selectItemByIndex()
 
 func getCurrentSelectedTextureButton():

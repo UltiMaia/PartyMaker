@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b66xih2k0rs5y"]
+[gd_scene load_steps=15 format=3 uid="uid://b66xih2k0rs5y"]
 
 [ext_resource type="Script" path="res://Scenes/fase2.gd" id="1_73uf6"]
 [ext_resource type="Texture2D" uid="uid://h0y5xssjwgjb" path="res://Assets/Fase 2/kitchen.jpeg" id="2_s2pd2"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://dxwysngt7whrw" path="res://Assets/Fase 2/powdered milk.png" id="9_5shef"]
 [ext_resource type="Texture2D" uid="uid://c1wbpklyfk0xe" path="res://Assets/Fase 2/butter_opacity.png" id="9_w1y7m"]
 [ext_resource type="Texture2D" uid="uid://27kkkxlcfhxm" path="res://Assets/Fase 2/sugar_opacity.png" id="11_v73be"]
+[ext_resource type="AudioStream" uid="uid://b65l24s215my8" path="res://Assets/Sons/troca de item (abaixar volume).mp3" id="13_6k7qv"]
+[ext_resource type="AudioStream" uid="uid://dbkuwwe4fiq65" path="res://Assets/Sons/voicy-wrong-answer-sound-effect-8-bit_HBMUyIea.mp3" id="14_exmlh"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_73uf6")
@@ -132,6 +134,12 @@ theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("3_yokr2")
 theme_override_font_sizes/font_size = 30
 text = "VIDAS: 3"
+
+[node name="Right Answer Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_6k7qv")
+
+[node name="Wrong Answer Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_exmlh")
 
 [connection signal="pressed" from="Condensed Milk" to="." method="_on_condensed_milk_pressed"]
 [connection signal="pressed" from="Chocolate Powder" to="." method="_on_chocolate_powder_pressed"]

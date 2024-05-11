@@ -6,6 +6,8 @@ extends Node2D
 @onready var sugar = $Sugar
 @onready var powdered_milk = $"Powdered Milk"
 @onready var texture_rect = $MarginContainer/TextureRect
+@onready var wrong_answer_sound = $"Wrong Answer Sound"
+@onready var right_answer_sound = $"Right Answer Sound"
 
 var textureButtonList = []
 var listObjects = ["Condensed Milk","Chocolate Powder","Butter","Sugar","Powdered Milk"]
@@ -33,14 +35,16 @@ func selectWord():
 		get_tree().change_scene_to_file("res://Scenes/start_screen.tscn")
 		
 	if lives == 0:
+		wrong_answer_sound.play()
 		get_tree().change_scene_to_file("res://Scenes/start_screen.tscn")
 
 func checkAnswer(guess):
 	if answer == guess:
-		objects.erase(guess)
+		objects.erase(answer)
 		$Resposta.add_theme_color_override("font_color", Color.GREEN)
 		$Resposta.text = "Você acertou!" 
 		rightAnswer = guess
+		right_answer_sound.play()
 	else:
 		lives -= 1
 		$Vidas.text = "VIDAS: %d" % lives

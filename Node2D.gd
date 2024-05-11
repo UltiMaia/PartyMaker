@@ -5,6 +5,8 @@ extends Node2D
 @onready var party_hat = $"Party Hat"
 @onready var table = $Table
 @onready var trampoline = $Trampoline
+@onready var wrong_answer_sound = $"Wrong Answer Sound"
+@onready var right_answer_sound = $"Right Answer Sound"
 
 var textureButtonList = []
 var listObjects = ["Balloon","Chair","Party Hat","Table","Trampoline"]
@@ -33,19 +35,22 @@ func selectWord():
 		get_tree().change_scene_to_file("res://Scenes/fase2.tscn")
 		
 	if lives == 0:
+		wrong_answer_sound.play()
 		get_tree().change_scene_to_file("res://Scenes/start_screen.tscn")
 
 func checkAnswer(guess):
 	if answer == guess:
-		objects.erase(guess)
+		objects.erase(answer)
+		print(objects)
 		$Resposta.add_theme_color_override("font_color", Color.GREEN)
 		$Resposta.text = "Você acertou!"
 		rightAnswer = guess
+		right_answer_sound.play()
 	else:
-		lives -= 1
 		$Vidas.text = "VIDAS: %d" % lives
 		$Resposta.add_theme_color_override("font_color", Color.RED)
 		$Resposta.text = "Você errou..."
+		
 	_ready()
 
 func _on_balloon_pressed():
@@ -97,6 +102,8 @@ func _input(ev):
 			selectedItem = 4
 		else:
 			selectedItem -= 1
+	if Input.is_key_pressed(KEY_SPACE):
+		checkAnswer(getCurrentSelectedTextureButton().name)
 	selectItemByIndex()
 
 func getCurrentSelectedTextureButton():

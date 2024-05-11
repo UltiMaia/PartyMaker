@@ -32,16 +32,19 @@ func selectWord():
 		$Item.text = objects[index]
 		answer = objects[index]
 	else:
-		get_tree().change_scene_to_file("res://Scenes/fase2.tscn")
+		GlobalTexts.currentFase = "2"
+		get_tree().change_scene_to_file("res://Scenes/between_stages.tscn")
 		
 	if lives == 0:
 		wrong_answer_sound.play()
 		get_tree().change_scene_to_file("res://Scenes/start_screen.tscn")
 
 func checkAnswer(guess):
+	if !objects.has(guess):
+		return;
+	
 	if answer == guess:
 		objects.erase(answer)
-		print(objects)
 		$Resposta.add_theme_color_override("font_color", Color.GREEN)
 		$Resposta.text = "Você acertou!"
 		rightAnswer = guess

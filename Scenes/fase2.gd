@@ -32,6 +32,7 @@ func selectWord():
 		$Item.text = objects[index]
 		answer = objects[index]
 	else:
+		GlobalTexts.currentFase = "3"
 		get_tree().change_scene_to_file("res://Scenes/start_screen.tscn")
 		
 	if lives == 0:
@@ -39,6 +40,9 @@ func selectWord():
 		get_tree().change_scene_to_file("res://Scenes/start_screen.tscn")
 
 func checkAnswer(guess):
+	if !objects.has(guess):
+		return;
+		
 	if answer == guess:
 		objects.erase(answer)
 		$Resposta.add_theme_color_override("font_color", Color.GREEN)
@@ -83,7 +87,6 @@ func selectItem(elementSelected: TextureButton):
 
 func unselectItem(elementSelected: TextureButton):
 	var texture = elementSelected.name 
-	print(texture)
 	var texturePath = "res://Assets/Fase 2/" + texture + ".png"
 	elementSelected.texture_normal = ResourceLoader.load(texturePath)
 

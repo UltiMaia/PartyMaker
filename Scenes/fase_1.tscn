@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://cg67cxq1fi76g"]
 
-[ext_resource type="Script" path="res://Node2D.gd" id="1_pfxrc"]
+[ext_resource type="Script" path="res://fase_1.gd" id="1_pfxrc"]
 [ext_resource type="Texture2D" uid="uid://c33ycygjcjv7n" path="res://Assets/Assets_cenario/wji3k711.bmp" id="2_uq3wf"]
 [ext_resource type="FontFile" uid="uid://ch103gi2tob72" path="res://Font/font/andina.ttf" id="3_6e8mv"]
 [ext_resource type="Texture2D" uid="uid://dlhwsdw61rf7s" path="res://Assets/Fase 1/assets-aniversario/balloon.png" id="4_tlb2a"]

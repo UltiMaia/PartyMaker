@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://bue766hy1jmpq"]
+
+[ext_resource type="Script" path="res://Scenes/between_stages.gd" id="1_85jxf"]
+[ext_resource type="Texture2D" uid="uid://byexdvu3flhpt" path="res://Assets/pixel-art-set-presents-gifts-holidays-events-cute-bright-party-icons-vector-illustration-202858807.webp" id="2_l5xck"]
+[ext_resource type="FontFile" uid="uid://ch103gi2tob72" path="res://Font/font/andina.ttf" id="4_ycasn"]
+
+[node name="BetweenStages" type="CanvasLayer"]
+script = ExtResource("1_85jxf")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(577, 326)
+scale = Vector2(1.445, 1.23048)
+texture = ExtResource("2_l5xck")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer1" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 100
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer1"]
+layout_mode = 2
+text = "fjsdafjghdsabkghfjsdafjghdsabkghfjsdafjghdsabkghfjsdafjghdsabkghfjsdafjghdsabkghfjsdafjghdsabkghfjsdafjghdsabkgh"
+autowrap_mode = 1
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer1"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("4_ycasn")
+theme_override_font_sizes/font_size = 35
+text = "PRESS TO PLAY"
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer1/Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -91,6 +91,7 @@ func unselectItem(elementSelected: TextureButton):
 	elementSelected.texture_normal = ResourceLoader.load(texturePath)
 
 func _input(ev):
+	print(ev)
 	if Input.is_key_pressed(KEY_RIGHT):
 		var selectedItemTexture = getCurrentSelectedTextureButton()
 		unselectItem(selectedItemTexture)

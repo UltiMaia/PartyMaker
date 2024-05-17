@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqd6jp1a7h8ig"
-path="res://.godot/imported/chocolate_powder_selected.png-43b312f555adf8244168dd3c2817604b.ctex"
+uid="uid://dwebbr2253icn"
+path="res://.godot/imported/chocolate powder_selected.png-053e39af7af7e134c19ad66fdcefa9c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fase 2/chocolate_powder_selected.png"
-dest_files=["res://.godot/imported/chocolate_powder_selected.png-43b312f555adf8244168dd3c2817604b.ctex"]
+source_file="res://Assets/Fase 2/chocolate powder_selected.png"
+dest_files=["res://.godot/imported/chocolate powder_selected.png-053e39af7af7e134c19ad66fdcefa9c7.ctex"]
 
 [params]
 

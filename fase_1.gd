@@ -83,6 +83,7 @@ func reduceButtonsOpacity():
 func selectItem(elementSelected: TextureButton):
 	var texture = elementSelected.name + "_selected"
 	var texturePath = "res://Assets/Fase 1/assets-aniversario/" + texture + ".png"
+	print(texturePath)
 	elementSelected.texture_normal = ResourceLoader.load(texturePath)
 
 func unselectItem(elementSelected: TextureButton):

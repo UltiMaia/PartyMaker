@@ -19,6 +19,12 @@ config/icon="res://icon.svg"
 
 GlobalTexts="*res://Scenes/GlobalTexts.gd"
 
+[display]
+
+window/size/mode=3
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
 [editor]
 
 version_control/plugin_name="GitPlugin"

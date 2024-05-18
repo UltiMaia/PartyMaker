@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bue766hy1jmpq"]
+[gd_scene load_steps=5 format=3 uid="uid://bue766hy1jmpq"]
 
 [ext_resource type="Script" path="res://Scenes/between_stages.gd" id="1_85jxf"]
 [ext_resource type="Texture2D" uid="uid://byexdvu3flhpt" path="res://Assets/pixel-art-set-presents-gifts-holidays-events-cute-bright-party-icons-vector-illustration-202858807.webp" id="2_l5xck"]
+[ext_resource type="Texture2D" uid="uid://dltjqs3x4d3m6" path="res://Assets/Assets_cenario/Frame 7.png" id="3_vr0sb"]
 [ext_resource type="FontFile" uid="uid://ch103gi2tob72" path="res://Font/font/andina.ttf" id="4_ycasn"]
 
 [node name="BetweenStages" type="CanvasLayer"]
@@ -32,10 +33,19 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 100
 
+[node name="Icone-do-computador-do-monitor-pixel-art-para-jogo-de-8-bits-em-fundo-branco360488-172-removebg-preview(1)" type="Sprite2D" parent="MarginContainer/VBoxContainer1"]
+position = Vector2(142, 158)
+texture = ExtResource("3_vr0sb")
+
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer1"]
 layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.737255, 0.388235, 0.435294, 1)
+theme_override_colors/font_outline_color = Color(1, 0.776471, 0.423529, 1)
+theme_override_fonts/font = ExtResource("4_ycasn")
+theme_override_font_sizes/font_size = 24
 text = "fjsdafjghdsabkghfjsdafjghdsabkghfjsdafjghdsabkghfjsdafjghdsabkghfjsdafjghdsabkghfjsdafjghdsabkghfjsdafjghdsabkgh"
-autowrap_mode = 1
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer1"]
 custom_minimum_size = Vector2(10, 10)
@@ -44,6 +54,12 @@ size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("4_ycasn")
 theme_override_font_sizes/font_size = 35
 text = "PRESS TO PLAY"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 1136.0
+offset_bottom = 632.0
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true

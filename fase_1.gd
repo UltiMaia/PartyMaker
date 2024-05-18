@@ -7,6 +7,7 @@ extends Node2D
 @onready var trampoline = $Trampoline
 @onready var wrong_answer_sound = $"Wrong Answer Sound"
 @onready var right_answer_sound = $"Right Answer Sound"
+@onready var lost_sound = $"Lost Sound"
 
 var textureButtonList = []
 var listObjects = ["Balloon","Chair","Party Hat","Table","Trampoline"]
@@ -36,13 +37,14 @@ func selectWord():
 		get_tree().change_scene_to_file("res://Scenes/between_stages.tscn")
 		
 	if lives == 0:
-		wrong_answer_sound.play()
-		get_tree().change_scene_to_file("res://Scenes/start_screen.tscn")
+		lost_sound.play()
+		OS.delay_msec(1000)
+		GlobalTexts.currentFase = "Loose"
+		get_tree().change_scene_to_file("res://Scenes/between_stages.tscn")
 
 func checkAnswer(guess):
 	if !objects.has(guess):
 		return;
-	
 	if answer == guess:
 		objects.erase(answer)
 		$Resposta.add_theme_color_override("font_color", Color.GREEN)
@@ -50,10 +52,11 @@ func checkAnswer(guess):
 		rightAnswer = guess
 		right_answer_sound.play()
 	else:
+		lives -= 1
 		$Vidas.text = "VIDAS: %d" % lives
 		$Resposta.add_theme_color_override("font_color", Color.RED)
 		$Resposta.text = "Você errou..."
-		
+		wrong_answer_sound.play()
 	_ready()
 
 func _on_balloon_pressed():

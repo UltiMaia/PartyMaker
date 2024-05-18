@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b66xih2k0rs5y"]
+[gd_scene load_steps=16 format=3 uid="uid://b66xih2k0rs5y"]
 
 [ext_resource type="Script" path="res://Scenes/fase2.gd" id="1_66cyl"]
 [ext_resource type="Texture2D" uid="uid://h0y5xssjwgjb" path="res://Assets/Fase 2/kitchen.jpeg" id="2_n10wf"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dxwysngt7whrw" path="res://Assets/Fase 2/powdered milk.png" id="12_616xh"]
 [ext_resource type="AudioStream" uid="uid://b65l24s215my8" path="res://Assets/Sons/troca de item (abaixar volume).mp3" id="13_n0g6k"]
 [ext_resource type="AudioStream" uid="uid://dbkuwwe4fiq65" path="res://Assets/Sons/voicy-wrong-answer-sound-effect-8-bit_HBMUyIea.mp3" id="14_37omy"]
+[ext_resource type="AudioStream" uid="uid://dnrr0k508odfk" path="res://Assets/Sons/mixkit-game-show-wrong-answer-buzz-950.wav" id="15_a5ogr"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_66cyl")
@@ -138,8 +139,11 @@ text = "VIDAS: 3"
 [node name="Right Answer Sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_n0g6k")
 
-[node name="Wrong Answer Sound" type="AudioStreamPlayer" parent="."]
+[node name="Lost Sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_37omy")
+
+[node name="Wrong Answer Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_a5ogr")
 
 [connection signal="pressed" from="Condensed Milk" to="." method="_on_condensed_milk_pressed"]
 [connection signal="pressed" from="Chocolate Powder" to="." method="_on_chocolate_powder_pressed"]

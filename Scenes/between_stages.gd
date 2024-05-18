@@ -5,13 +5,17 @@ extends CanvasLayer
 func _ready():
 	if GlobalTexts.currentFase == "1":
 		label.text = "
-Na primeira fase, o jogador embarcará na busca pelas decorações essenciais para a festa. Entre elas, estarão os chapeuzinhos, os balões, as cadeiras, trampolim, e as mesas. O desafio será encontrar e coletar cada uma dessas decorações enquanto navega pela sala, utilizando as setas do teclado para movimentar o personagem e a tecla de espaço para coletar os itens corretos."
+Na primeira fase, o jogador coletará as decorações essenciais para a festa: chapeuzinhos, balões, cadeiras, trampolim, e as mesas. "
 	
 	if GlobalTexts.currentFase == "2":
-		label.text = "Na segunda fase, a missão do jogador será fazer os doces, que serão o destaque da festa. Os objetos finais a serem coletados incluirão doces como brigadeiros, beijinhos, e outros. Para produzi-los, o jogador terá que juntar os ingredientes essenciais: leite condensado, chocolate em pó, manteiga, açúcar e leite em pó."
+		label.text = "Na segunda fase, a missão do jogador será coletar os ingredientes dos doces: leite condensado, chocolate em pó, manteiga, açúcar e leite em pó."
 	
 	if GlobalTexts.currentFase == "3":
 		label.text = "A fase 3 consiste em..."
+	
+	if GlobalTexts.currentFase == "Loose":
+		label.text = "Você perdeu :("
+		
 	
 
 func _input(ev):
@@ -19,4 +23,7 @@ func _input(ev):
 		_on_button_pressed()
 	
 func _on_button_pressed():
+	if GlobalTexts.currentFase == "Loose":
+		get_tree().change_scene_to_file("res://Scenes/start_screen.tscn")
+		return
 	get_tree().change_scene_to_file("res://Scenes/fase_" + GlobalTexts.currentFase +".tscn")

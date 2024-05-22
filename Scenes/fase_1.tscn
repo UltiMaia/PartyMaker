@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cg67cxq1fi76g"]
+[gd_scene load_steps=13 format=3 uid="uid://cg67cxq1fi76g"]
 
 [ext_resource type="Script" path="res://fase_1.gd" id="1_pfxrc"]
 [ext_resource type="Texture2D" uid="uid://c33ycygjcjv7n" path="res://Assets/Assets_cenario/wji3k711.bmp" id="2_uq3wf"]
@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://b65l24s215my8" path="res://Assets/Sons/troca de item (abaixar volume).mp3" id="9_h605u"]
 [ext_resource type="AudioStream" uid="uid://dbkuwwe4fiq65" path="res://Assets/Sons/voicy-wrong-answer-sound-effect-8-bit_HBMUyIea.mp3" id="10_3mgyc"]
 [ext_resource type="AudioStream" uid="uid://dnrr0k508odfk" path="res://Assets/Sons/mixkit-game-show-wrong-answer-buzz-950.wav" id="11_2wkxi"]
+[ext_resource type="AudioStream" uid="uid://cqd5m8dg1vrma" path="res://Assets/Sons/fase 1.mp3" id="12_c2ew6"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_pfxrc")
@@ -138,6 +139,10 @@ stream = ExtResource("10_3mgyc")
 
 [node name="Wrong Answer Sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_2wkxi")
+
+[node name="Background Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_c2ew6")
+autoplay = true
 
 [connection signal="pressed" from="Balloon" to="." method="_on_balloon_pressed"]
 [connection signal="pressed" from="Chair" to="." method="_on_chair_pressed"]

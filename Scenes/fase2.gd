@@ -9,6 +9,7 @@ extends Node2D
 @onready var right_answer_sound = $"Right Answer Sound"
 @onready var wrong_answer_sound = $"Wrong Answer Sound"
 @onready var lost_sound = $"Lost Sound"
+@onready var background_music = $BackgroundMusic
 
 var textureButtonList = []
 var listObjects = ["Condensed Milk","Chocolate Powder","Butter","Sugar","Powdered Milk"]
@@ -85,12 +86,12 @@ func reduceButtonsOpacity():
 
 func selectItem(elementSelected: TextureButton):
 	var texture = elementSelected.name + "_selected"
-	var texturePath = "res://Assets/Fase 2/" + texture + ".png"
+	var texturePath = "res://Assets/Fase 3/" + texture + ".png"
 	elementSelected.texture_normal = ResourceLoader.load(texturePath)
 
 func unselectItem(elementSelected: TextureButton):
 	var texture = elementSelected.name 
-	var texturePath = "res://Assets/Fase 2/" + texture + ".png"
+	var texturePath = "res://Assets/Fase 3/" + texture + ".png"
 	elementSelected.texture_normal = ResourceLoader.load(texturePath)
 
 func _input(ev):

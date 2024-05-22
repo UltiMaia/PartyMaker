@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dxwysngt7whrw" path="res://Assets/Fase 2/powdered milk.png" id="12_616xh"]
 [ext_resource type="AudioStream" uid="uid://b65l24s215my8" path="res://Assets/Sons/troca de item (abaixar volume).mp3" id="13_n0g6k"]
 [ext_resource type="AudioStream" uid="uid://dbkuwwe4fiq65" path="res://Assets/Sons/voicy-wrong-answer-sound-effect-8-bit_HBMUyIea.mp3" id="14_37omy"]
-[ext_resource type="AudioStream" uid="uid://dnrr0k508odfk" path="res://Assets/Sons/mixkit-game-show-wrong-answer-buzz-950.wav" id="15_a5ogr"]
+[ext_resource type="AudioStream" uid="uid://bvrpr0jvtcxxg" path="res://Assets/Sons/fase 2.mp3" id="15_q3kng"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_66cyl")
@@ -143,7 +143,11 @@ stream = ExtResource("13_n0g6k")
 stream = ExtResource("14_37omy")
 
 [node name="Wrong Answer Sound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("15_a5ogr")
+stream = ExtResource("15_q3kng")
+
+[node name="Background Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_q3kng")
+autoplay = true
 
 [connection signal="pressed" from="Condensed Milk" to="." method="_on_condensed_milk_pressed"]
 [connection signal="pressed" from="Chocolate Powder" to="." method="_on_chocolate_powder_pressed"]

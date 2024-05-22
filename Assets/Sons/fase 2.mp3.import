@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bvrpr0jvtcxxg"
+path="res://.godot/imported/fase 2.mp3-f30513a8206c5b680347d7b786ecb6d9.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sons/fase 2.mp3"
+dest_files=["res://.godot/imported/fase 2.mp3-f30513a8206c5b680347d7b786ecb6d9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

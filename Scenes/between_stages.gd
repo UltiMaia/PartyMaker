@@ -4,8 +4,7 @@ extends CanvasLayer
 
 func _ready():
 	if GlobalTexts.currentFase == "1":
-		label.text = "
-Na primeira fase, o jogador coletará as decorações essenciais para a festa: chapeuzinhos, balões, cadeiras, trampolim, e as mesas. "
+		label.text = "Na primeira fase, o jogador coletará as decorações essenciais para a festa: chapeuzinhos, balões, cadeiras, trampolim, e as mesas. "
 	
 	if GlobalTexts.currentFase == "2":
 		label.text = "Na segunda fase, a missão do jogador será coletar os ingredientes dos doces: leite condensado, chocolate em pó, manteiga, açúcar e leite em pó."

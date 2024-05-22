@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var label = $MarginContainer/VBoxContainer1/Label
+@onready var label = $MarginContainer/VBoxContainer/Label
 
 func _ready():
 	if GlobalTexts.currentFase == "1":

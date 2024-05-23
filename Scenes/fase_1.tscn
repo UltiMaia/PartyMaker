@@ -142,7 +142,6 @@ stream = ExtResource("11_2wkxi")
 
 [node name="Background Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("12_c2ew6")
-autoplay = true
 
 [connection signal="pressed" from="Balloon" to="." method="_on_balloon_pressed"]
 [connection signal="pressed" from="Chair" to="." method="_on_chair_pressed"]

@@ -8,7 +8,9 @@ extends Node2D
 @onready var wrong_answer_sound = $"Wrong Answer Sound"
 @onready var right_answer_sound = $"Right Answer Sound"
 @onready var lost_sound = $"Lost Sound"
+@onready var background_music = $"Background Music"
 
+var mainSongPlaying = false
 var textureButtonList = []
 var listObjects = ["Balloon","Chair","Party Hat","Table","Trampoline"]
 var objects = listObjects.duplicate()
@@ -22,6 +24,9 @@ var red = Color(1.0,0.0,0.0,1.0)
 var green = Color(0.0,1.0,0.0,1.0)
 
 func _ready():
+	if !mainSongPlaying:
+		background_music.play()
+		mainSongPlaying = true 
 	textureButtonList = [balloon, chair, party_hat,table,trampoline]
 	reduceButtonsOpacity()
 	randomize()

@@ -147,7 +147,6 @@ stream = ExtResource("15_q3kng")
 
 [node name="Background Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("15_q3kng")
-autoplay = true
 
 [connection signal="pressed" from="Condensed Milk" to="." method="_on_condensed_milk_pressed"]
 [connection signal="pressed" from="Chocolate Powder" to="." method="_on_chocolate_powder_pressed"]

@@ -11,6 +11,8 @@ extends Node2D
 @onready var lost_sound = $"Lost Sound"
 @onready var background_music = $BackgroundMusic
 
+
+var mainSongPlaying = false
 var textureButtonList = []
 var listObjects = ["Condensed Milk","Chocolate Powder","Butter","Sugar","Powdered Milk"]
 var objects = listObjects.duplicate()
@@ -22,6 +24,9 @@ var green = Color(0.0,1.0,0.0,1.0)
 var selectedItem = 2
 
 func _ready():
+	if !mainSongPlaying:
+		background_music.play()
+		mainSongPlaying = true 
 	textureButtonList = [condensed_milk,chocolate_powder,butter,sugar,powdered_milk]
 	reduceButtonsOpacity()
 	texture_rect.modulate.a = 0.5

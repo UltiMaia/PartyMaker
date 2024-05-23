@@ -24,6 +24,8 @@ var red = Color(1.0,0.0,0.0,1.0)
 var green = Color(0.0,1.0,0.0,1.0)
 
 func _ready():
+	if GlobalTexts.mode == "HARD":
+		lives = GlobalTexts.lifes
 	if !mainSongPlaying:
 		background_music.play()
 		mainSongPlaying = true 
@@ -58,6 +60,7 @@ func checkAnswer(guess):
 		right_answer_sound.play()
 	else:
 		lives -= 1
+		GlobalTexts.lifes -= 1
 		$Vidas.text = "VIDAS: %d" % lives
 		$Resposta.add_theme_color_override("font_color", Color.RED)
 		$Resposta.text = "Você errou..."

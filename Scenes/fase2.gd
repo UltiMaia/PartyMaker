@@ -9,7 +9,7 @@ extends Node2D
 @onready var right_answer_sound = $"Right Answer Sound"
 @onready var wrong_answer_sound = $"Wrong Answer Sound"
 @onready var lost_sound = $"Lost Sound"
-@onready var background_music = $BackgroundMusic
+@onready var background_music = $"Background Music"
 
 
 var mainSongPlaying = false
@@ -24,6 +24,14 @@ var green = Color(0.0,1.0,0.0,1.0)
 var selectedItem = 2
 
 func _ready():
+	print(GlobalTexts.lifes)
+	print(GlobalTexts.mode)
+	print(GlobalTexts.mode == "HARD")
+	if GlobalTexts.mode == "HARD":
+		print("entrou")
+		lives = GlobalTexts.lifes
+		$Vidas.text = "VIDAS: %d" % lives
+		
 	if !mainSongPlaying:
 		background_music.play()
 		mainSongPlaying = true 
@@ -59,6 +67,7 @@ func checkAnswer(guess):
 		right_answer_sound.play()
 	else:
 		lives -= 1
+		GlobalTexts.lifes -= 1
 		$Vidas.text = "VIDAS: %d" % lives
 		$Resposta.add_theme_color_override("font_color", Color.RED)
 		$Resposta.text = "Você errou..."
@@ -91,16 +100,17 @@ func reduceButtonsOpacity():
 
 func selectItem(elementSelected: TextureButton):
 	var texture = elementSelected.name + "_selected"
-	var texturePath = "res://Assets/Fase 3/" + texture + ".png"
+	print(texture)
+	var texturePath = "res://Assets/Fase 2/" + texture + ".png"
 	elementSelected.texture_normal = ResourceLoader.load(texturePath)
 
 func unselectItem(elementSelected: TextureButton):
 	var texture = elementSelected.name 
-	var texturePath = "res://Assets/Fase 3/" + texture + ".png"
+	print(texture)
+	var texturePath = "res://Assets/Fase 2/" + texture + ".png"
 	elementSelected.texture_normal = ResourceLoader.load(texturePath)
 
 func _input(ev):
-	print(ev)
 	if Input.is_key_pressed(KEY_RIGHT):
 		var selectedItemTexture = getCurrentSelectedTextureButton()
 		unselectItem(selectedItemTexture)

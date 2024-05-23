@@ -1,13 +1,13 @@
 extends CanvasLayer
 
-@onready var label = $MarginContainer/VBoxContainer/Label
+@onready var label = $Label
 
 func _ready():
 	if GlobalTexts.currentFase == "1":
-		label.text = "Na primeira fase, o jogador coletará as decorações essenciais para a festa: chapeuzinhos, balões, cadeiras, trampolim, e as mesas. "
+		label.text = "Na primeira fase, o jogador coletará as\ndecorações essenciais para a festa: \nchapeuzinhos, balões, cadeiras, \ntrampolim, e as mesas."
 	
 	if GlobalTexts.currentFase == "2":
-		label.text = "Na segunda fase, a missão do jogador será coletar os ingredientes dos doces: leite condensado, chocolate em pó, manteiga, açúcar e leite em pó."
+		label.text = "Na segunda fase, a missão do jogador será	\ncoletar os ingredientes dos doces:\nleite condensado, chocolate em pó, manteiga,\naçúcar e leite em pó."
 	
 	if GlobalTexts.currentFase == "3":
 		label.text = "A fase 3 consiste em..."

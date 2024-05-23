@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://4tb17ibij4gj"]
+
+[ext_resource type="Script" path="res://Scenes/mode_selection.gd" id="1_nmo8f"]
+[ext_resource type="Texture2D" uid="uid://byexdvu3flhpt" path="res://Assets/pixel-art-set-presents-gifts-holidays-events-cute-bright-party-icons-vector-illustration-202858807.webp" id="2_prnmp"]
+[ext_resource type="Texture2D" uid="uid://dltjqs3x4d3m6" path="res://Assets/Assets_cenario/Frame 7.png" id="3_n43kt"]
+[ext_resource type="FontFile" uid="uid://ch103gi2tob72" path="res://Font/font/andina.ttf" id="4_0erse"]
+
+[node name="ModeSelection" type="Node2D"]
+script = ExtResource("1_nmo8f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(577, 326)
+scale = Vector2(1.445, 1.23048)
+texture = ExtResource("2_prnmp")
+
+[node name="Icone-do-computador-do-monitor-pixel-art-para-jogo-de-8-bits-em-fundo-branco360488-172-removebg-preview(1)" type="Sprite2D" parent="."]
+position = Vector2(569, 282)
+texture = ExtResource("3_n43kt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 382.0
+offset_top = 156.0
+offset_right = 759.0
+offset_bottom = 384.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_shadow_color = Color(0.737255, 0.388235, 0.435294, 1)
+theme_override_colors/font_outline_color = Color(1, 0.776471, 0.423529, 1)
+theme_override_fonts/font = ExtResource("4_0erse")
+theme_override_font_sizes/font_size = 24
+text = "Escolha seu modo de jogo:"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 131
+
+[node name="Normal" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("4_0erse")
+theme_override_font_sizes/font_size = 35
+text = "NORMAL"
+
+[node name="Hard" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_0erse")
+theme_override_font_sizes/font_size = 35
+text = "DIFICIL"
+
+[connection signal="pressed" from="VBoxContainer/Normal" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Hard" to="." method="_on_button_2_pressed"]

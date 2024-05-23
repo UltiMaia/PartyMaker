@@ -8,6 +8,37 @@
 [node name="BetweenStages" type="CanvasLayer"]
 script = ExtResource("1_85jxf")
 
+[node name="Icone-do-computador-do-monitor-pixel-art-para-jogo-de-8-bits-em-fundo-branco360488-172-removebg-preview(1)" type="Sprite2D" parent="."]
+position = Vector2(569, 330)
+scale = Vector2(1.43247, 1.43247)
+texture = ExtResource("3_vr0sb")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 216.0
+offset_top = 93.0
+offset_right = 2285.0
+offset_bottom = 118.0
+size_flags_horizontal = 4
+theme_override_colors/font_shadow_color = Color(0.737255, 0.388235, 0.435294, 1)
+theme_override_colors/font_outline_color = Color(1, 0.776471, 0.423529, 1)
+theme_override_fonts/font = ExtResource("4_ycasn")
+theme_override_font_sizes/font_size = 24
+text = "Na segunda fase, a missão do jogador será coletar os ingredientes dos doces: leite condensado, chocolate em pó, manteiga, açúcar e leite em pó."
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(10, 10)
+offset_left = 420.0
+offset_top = 412.0
+offset_right = 731.0
+offset_bottom = 456.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("4_ycasn")
+theme_override_font_sizes/font_size = 35
+text = "PRESS TO PLAY"
+
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground"]
@@ -15,49 +46,8 @@ position = Vector2(577, 326)
 scale = Vector2(1.445, 1.23048)
 texture = ExtResource("2_l5xck")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_constants/margin_left = 16
-theme_override_constants/margin_top = 16
-theme_override_constants/margin_right = 16
-theme_override_constants/margin_bottom = 16
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-
-[node name="Icone-do-computador-do-monitor-pixel-art-para-jogo-de-8-bits-em-fundo-branco360488-172-removebg-preview(1)" type="Sprite2D" parent="MarginContainer/VBoxContainer"]
-position = Vector2(554, 266)
-texture = ExtResource("3_vr0sb")
-
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_colors/font_shadow_color = Color(0.737255, 0.388235, 0.435294, 1)
-theme_override_colors/font_outline_color = Color(1, 0.776471, 0.423529, 1)
-theme_override_fonts/font = ExtResource("4_ycasn")
-theme_override_font_sizes/font_size = 24
-text = "fjsdafjghdsabkghfjsdafjghdsabkghfjsdafjghdsabkghfjsdafjghdsabkghfjsdafjghdsabkghfjsdafjghdsabkghfjsdafjghdsabkgh"
-horizontal_alignment = 1
-autowrap_mode = 2
-justification_flags = 131
-
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(10, 10)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_fonts/font = ExtResource("4_ycasn")
-theme_override_font_sizes/font_size = 35
-text = "PRESS TO PLAY"
-
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

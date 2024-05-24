@@ -1,0 +1,131 @@
+
+
+Fri May 17 21:37:14 2024
+Command line: TestDisk
+
+TestDisk 7.1, Data Recovery Utility, July 2019
+Christophe GRENIER <grenier@cgsecurity.org>
+https://www.cgsecurity.org
+OS: Linux, kernel 6.5.0-35-generic (#35~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue May  7 09:00:52 UTC 2) x86_64
+Compiler: GCC 11.2
+ext2fs lib: 1.46.5, ntfs lib: libntfs-3g, reiserfs lib: none, ewf lib: none, curses lib: ncurses 6.3
+User is not root!
+Hard disk list
+
+
+TestDisk exited normally.
+Using locale 'LC_CTYPE=pt_BR.UTF-8;LC_NUMERIC=pt_BR.UTF-8;LC_TIME=pt_BR.UTF-8;LC_COLLATE=en_US.UTF-8;LC_MONETARY=pt_BR.UTF-8;LC_MESSAGES=en_US.UTF-8;LC_PAPER=pt_BR.UTF-8;LC_NAME=pt_BR.UTF-8;LC_ADDRESS=pt_BR.UTF-8;LC_TELEPHONE=pt_BR.UTF-8;LC_MEASUREMENT=pt_BR.UTF-8;LC_IDENTIFICATION=pt_BR.UTF-8'.
+
+
+Fri May 17 21:37:17 2024
+Command line: TestDisk /debug
+
+TestDisk 7.1, Data Recovery Utility, July 2019
+Christophe GRENIER <grenier@cgsecurity.org>
+https://www.cgsecurity.org
+OS: Linux, kernel 6.5.0-35-generic (#35~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue May  7 09:00:52 UTC 2) x86_64
+Compiler: GCC 11.2
+ext2fs lib: 1.46.5, ntfs lib: libntfs-3g, reiserfs lib: none, ewf lib: none, curses lib: ncurses 6.3
+/dev/sda: LBA, LBA48 support
+/dev/sda: size       1953525168 sectors
+/dev/sda: user_max   1953525168 sectors
+Warning: can't get size for Disk /dev/mapper/control - 0 B - 0 sectors, sector size=512
+Hard disk list
+Disk /dev/sda - 1000 GB / 931 GiB - CHS 121601 255 63, sector size=512 - WDC WD10SPZX-21Z10T0, S/N:WD-WX51A89NPLCD, FW:02.01A02
+Disk /dev/sdb - 500 GB / 465 GiB - CHS 60801 255 63, sector size=512 - Innostor Ext. HDD
+Disk /dev/loop0 - 4096 B - 8 sectors (RO), sector size=512
+Disk /dev/loop1 - 66 MB / 63 MiB - 129944 sectors (RO), sector size=512
+Disk /dev/loop10 - 55 MB / 53 MiB - 109072 sectors (RO), sector size=512
+Disk /dev/loop11 - 40 MB / 38 MiB - 79328 sectors (RO), sector size=512
+Disk /dev/loop12 - 462 KB / 452 KiB - 904 sectors (RO), sector size=512
+Disk /dev/loop13 - 67 MB / 63 MiB - 131056 sectors (RO), sector size=512
+Disk /dev/loop14 - 67 MB / 63 MiB - 130960 sectors (RO), sector size=512
+Disk /dev/loop2 - 77 MB / 74 MiB - 152040 sectors (RO), sector size=512
+Disk /dev/loop3 - 77 MB / 73 MiB - 151296 sectors (RO), sector size=512
+Disk /dev/loop4 - 248 MB / 237 MiB - 485800 sectors (RO), sector size=512
+Disk /dev/loop5 - 366 MB / 349 MiB - 716176 sectors (RO), sector size=512
+Disk /dev/loop6 - 509 MB / 485 MiB - 994336 sectors (RO), sector size=512
+Disk /dev/loop7 - 96 MB / 91 MiB - 187776 sectors (RO), sector size=512
+Disk /dev/loop8 - 13 MB / 12 MiB - 26472 sectors (RO), sector size=512
+Disk /dev/loop9 - 12 MB / 12 MiB - 25240 sectors (RO), sector size=512
+Disk /dev/nvme0n1 - 500 GB / 465 GiB - CHS 476940 64 32, sector size=512
+
+Partition table type (auto): Intel
+Disk /dev/sda - 1000 GB / 931 GiB - WDC WD10SPZX-21Z10T0
+Partition table type: EFI GPT
+
+Analyse Disk /dev/sda - 1000 GB / 931 GiB - CHS 121601 255 63
+hdr_size=92
+hdr_lba_self=1
+hdr_lba_alt=1953525167 (expected 1953525167)
+hdr_lba_start=34
+hdr_lba_end=1953525134
+hdr_lba_table=2
+hdr_entries=128
+hdr_entsz=128
+hdr_size=92
+hdr_lba_self=1953525167
+hdr_lba_alt=1 (expected 1)
+hdr_lba_start=34
+hdr_lba_end=1953525134
+hdr_lba_table=1953525135
+hdr_entries=128
+hdr_entsz=128
+Trying alternate GPT
+Current partition structure:
+Trying alternate GPT
+
+search_part()
+Disk /dev/sda - 1000 GB / 931 GiB - CHS 121601 255 63
+FAT32 at 0/32/33
+FAT1 : 32-1859
+FAT2 : 1860-3687
+start_rootdir : 3688 root cluster : 2
+Data : 3688-237567
+sectors : 237568
+cluster_size : 1
+no_of_cluster : 233880 (2 - 233881)
+fat_length 1828 calculated 1828
+set_FAT_info: name from BS used
+
+FAT32 at 0/32/33
+FAT: cluster=2(0x2), pos=5736
+     EFI System                  2048     239615     237568 [EFI System Partition] [NO NAME]
+     FAT32, blocksize=512, 121 MB / 116 MiB
+
+recover_EXT2: s_block_group_nr=0/3051, s_mnt_count=99/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 100000000
+recover_EXT2: part_size 800000000
+Filesystem created: Sun May 21 13:36:44 2023
+Last mount time:    Thu May 16 12:39:19 2024
+     Linux filesys. data       239616  800239615  800000000
+     ext4 blocksize=4096 Large_file Sparse_SB, 409 GB / 381 GiB
+
+recover_EXT2: s_block_group_nr=0/4368, s_mnt_count=97/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 143160832
+recover_EXT2: part_size 1145286656
+Filesystem created: Tue May 23 01:04:43 2023
+Last mount time:    Thu May 16 12:39:21 2024
+     Linux filesys. data    800239616 1945526271 1145286656
+     ext4 blocksize=4096 Large_file Sparse_SB, 586 GB / 546 GiB
+     Linux Swap            1945526272 1953523695    7997424
+     SWAP2 version 1, pagesize=4096, 4094 MB / 3904 MiB
+
+Results
+   P EFI System                  2048     239615     237568 [EFI System Partition] [NO NAME]
+     FAT32, blocksize=512, 121 MB / 116 MiB
+   P Linux filesys. data       239616  800239615  800000000
+     ext4 blocksize=4096 Large_file Sparse_SB, 409 GB / 381 GiB
+   P Linux filesys. data    800239616 1945526271 1145286656
+     ext4 blocksize=4096 Large_file Sparse_SB, 586 GB / 546 GiB
+   P Linux Swap            1945526272 1953523695    7997424
+     SWAP2 version 1, pagesize=4096, 4094 MB / 3904 MiB
+
+Hint for advanced users: dmsetup may be used if you prefer to avoid rewriting the partition table for the moment:
+echo "0 237568 linear /dev/sda 2048" | dmsetup create test0
+echo "0 800000000 linear /dev/sda 239616" | dmsetup create test1
+echo "0 1145286656 linear /dev/sda 800239616" | dmsetup create test2
+echo "0 7997424 linear /dev/sda 1945526272" | dmsetup create test3
+SIGINT detected! TestDisk has been killed.

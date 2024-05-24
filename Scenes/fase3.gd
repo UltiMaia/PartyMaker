@@ -48,7 +48,7 @@ func selectWord():
 		answer = objects[index]
 	else:
 		GlobalTexts.currentFase = "3"
-		get_tree().change_scene_to_file("res://Scenes/start_screen.tscn")
+		get_tree().change_scene_to_file("res://Scenes/tela_final.tscn")
 		
 	if lives == 0:
 		lost_sound.play()

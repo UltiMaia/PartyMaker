@@ -9,7 +9,7 @@ extends Node2D
 @onready var right_answer_sound = $"Right Answer Sound"
 @onready var wrong_answer_sound = $"Wrong Answer Sound"
 @onready var lost_sound = $"Lost Sound"
-@onready var background_music = $"Background Music"
+@onready var background_music = $AudioStreamPlayer2D
 
 
 var mainSongPlaying = false
@@ -24,16 +24,13 @@ var green = Color(0.0,1.0,0.0,1.0)
 var selectedItem = 0
 
 func _ready():
-	print(GlobalTexts.lifes)
-	print(GlobalTexts.mode)
-	print(GlobalTexts.mode == "HARD")
 	if GlobalTexts.mode == "HARD":
 		print("entrou")
 		lives = GlobalTexts.lifes
 		$Vidas.text = "VIDAS: %d" % lives
 		
 	if !mainSongPlaying:
-		# background_music.play()
+		background_music.play()
 		mainSongPlaying = true 
 	textureButtonList = [Cake,Egg,Candle,Flour,Milk]
 	reduceButtonsOpacity()
@@ -52,6 +49,7 @@ func selectWord():
 		
 	if lives == 0:
 		lost_sound.play()
+		OS.delay_msec(1000)
 		GlobalTexts.currentFase = "Loose"
 		get_tree().change_scene_to_file("res://Scenes/between_stages.tscn")
 
@@ -89,7 +87,6 @@ func reduceButtonsOpacity():
 
 func selectItem(elementSelected: TextureButton):
 	var texture = elementSelected.name + "_selected"
-	print(texture)
 	var texturePath = "res://Assets/Fase 3/" + texture + ".png"
 	elementSelected.texture_normal = ResourceLoader.load(texturePath)
 

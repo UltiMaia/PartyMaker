@@ -52,8 +52,9 @@ func selectWord():
 		
 	if lives == 0:
 		lost_sound.play()
+		OS.delay_msec(1000)
 		GlobalTexts.currentFase = "Loose"
-		get_tree().change_scene_to_file("res://Scenes/start_screen.tscn")
+		get_tree().change_scene_to_file("res://Scenes/between_stages.tscn")
 
 func checkAnswer(guess):
 	if !objects.has(guess):
@@ -100,7 +101,6 @@ func reduceButtonsOpacity():
 
 func selectItem(elementSelected: TextureButton):
 	var texture = elementSelected.name + "_selected"
-	print(texture)
 	var texturePath = "res://Assets/Fase 2/" + texture + ".png"
 	elementSelected.texture_normal = ResourceLoader.load(texturePath)
 

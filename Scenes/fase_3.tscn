@@ -5,7 +5,6 @@
 [ext_resource type="FontFile" uid="uid://ch103gi2tob72" path="res://Font/font/andina.ttf" id="3_v5ssa"]
 [ext_resource type="Texture2D" uid="uid://buh2nhjkuhspy" path="res://Assets/Fase 3/Cake.png" id="6_cksrh"]
 [ext_resource type="Texture2D" uid="uid://bxvqxqj2145o4" path="res://Assets/Fase 3/Candle.png" id="7_yd2ol"]
-[ext_resource type="Texture2D" uid="uid://mfk0y6o3qn2y" path="res://Assets/Fase 3/Cake_selected.png" id="8_22wrb"]
 [ext_resource type="Texture2D" uid="uid://bj1kq0nj7fm5a" path="res://Assets/Fase 3/Egg.png" id="8_jfbom"]
 [ext_resource type="Texture2D" uid="uid://dp07qs5a621e7" path="res://Assets/Fase 3/Flour.png" id="9_7jjas"]
 [ext_resource type="Texture2D" uid="uid://da53tkamb2vn7" path="res://Assets/Fase 3/Candle_selected.png" id="9_jgqk1"]
@@ -16,6 +15,9 @@
 [ext_resource type="AudioStream" uid="uid://dbkuwwe4fiq65" path="res://Assets/Sons/voicy-wrong-answer-sound-effect-8-bit_HBMUyIea.mp3" id="14_2gi4b"]
 [ext_resource type="Texture2D" uid="uid://cbg3mrtuqcx83" path="res://Assets/Fase 3/Milk_selected.png" id="14_vrepc"]
 [ext_resource type="AudioStream" uid="uid://c430k5wcxt4tr" path="res://Assets/Sons/fase 3.mp3" id="15_58xpt"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ycopb"]
+load_path = "res://.godot/imported/Cake_selected.png-15179a61df711f71e909a80027293f11.ctex"
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_odsrc")
@@ -83,7 +85,6 @@ stream = ExtResource("14_2gi4b")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("15_58xpt")
-autoplay = true
 
 [node name="Cake" type="TextureButton" parent="."]
 texture_filter = 1
@@ -92,7 +93,7 @@ offset_top = 320.0
 offset_right = 308.0
 offset_bottom = 522.0
 texture_normal = ExtResource("6_cksrh")
-texture_pressed = ExtResource("8_22wrb")
+texture_pressed = SubResource("CompressedTexture2D_ycopb")
 texture_hover = ExtResource("6_cksrh")
 texture_disabled = ExtResource("6_cksrh")
 texture_focused = ExtResource("6_cksrh")
@@ -149,6 +150,9 @@ texture_hover = ExtResource("10_frnta")
 texture_disabled = ExtResource("10_frnta")
 texture_focused = ExtResource("14_vrepc")
 stretch_mode = 5
+
+[node name="Lost Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_2gi4b")
 
 [connection signal="pressed" from="Cake" to="." method="_on_cake_pressed"]
 [connection signal="pressed" from="Candle" to="." method="_on_candle_pressed"]

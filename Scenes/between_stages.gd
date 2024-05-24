@@ -10,7 +10,7 @@ func _ready():
 		label.text = "Na segunda fase, a missão do jogador será	\ncoletar os ingredientes dos doces:\nleite condensado, chocolate em pó, manteiga,\naçúcar e leite em pó."
 	
 	if GlobalTexts.currentFase == "3":
-		label.text = "A fase 3 consiste em..."
+		label.text = "Na fase 3 você irá escolher\nos ingredientes para fazer o bolo "
 	
 	if GlobalTexts.currentFase == "Loose":
 		label.text = "Você perdeu :("

@@ -1,10 +1,10 @@
 extends Node2D
 
-@onready var condensed_milk = $"Condensed Milk"
-@onready var chocolate_powder = $"Chocolate Powder"
-@onready var butter = $Butter
-@onready var sugar = $Sugar
-@onready var powdered_milk = $"Powdered Milk"
+@onready var cake = $"Cake"
+@onready var candle = $"Candle"
+@onready var egg = $Egg
+@onready var flour = $Flour
+@onready var milk = $"Milk"
 @onready var texture_rect = $MarginContainer/TextureRect
 @onready var right_answer_sound = $"Right Answer Sound"
 @onready var wrong_answer_sound = $"Wrong Answer Sound"
@@ -14,7 +14,7 @@ extends Node2D
 
 var mainSongPlaying = false
 var textureButtonList = []
-var listObjects = ["Condensed Milk","Chocolate Powder","Butter","Sugar","Powdered Milk"]
+var listObjects = ["Cake","Candle","Egg","Flour","Milk"]
 var objects = listObjects.duplicate()
 var answer = ""
 var lives = 3
@@ -33,9 +33,9 @@ func _ready():
 		$Vidas.text = "VIDAS: %d" % lives
 		
 	if !mainSongPlaying:
-		background_music.play()
+		# background_music.play()
 		mainSongPlaying = true 
-	textureButtonList = [condensed_milk,chocolate_powder,butter,sugar,powdered_milk]
+	textureButtonList = [cake,candle,egg,flour,milk]
 	reduceButtonsOpacity()
 	texture_rect.modulate.a = 0.5
 	randomize()
@@ -48,12 +48,12 @@ func selectWord():
 		answer = objects[index]
 	else:
 		GlobalTexts.currentFase = "3"
-		get_tree().change_scene_to_file("res://Scenes/between_stages.tscn")
+		get_tree().change_scene_to_file("res://Scenes/start_screen.tscn")
 		
 	if lives == 0:
 		lost_sound.play()
 		GlobalTexts.currentFase = "Loose"
-		get_tree().change_scene_to_file("res://Scenes/start_screen.tscn")
+		get_tree().change_scene_to_file("res://Scenes/between_stages.tscn")
 
 func checkAnswer(guess):
 	if !objects.has(guess):
@@ -74,29 +74,18 @@ func checkAnswer(guess):
 		wrong_answer_sound.play()
 	_ready()
 
-func _on_condensed_milk_pressed():
-	checkAnswer("Condensed Milk")
-func _on_chocolate_powder_pressed():
-	checkAnswer("Chocolate Powder")
-func _on_sugar_pressed():
-	checkAnswer("Sugar")
-func _on_powdered_milk_pressed():
-	checkAnswer("Powdered Milk")
-func _on_butter_pressed():
-	checkAnswer("Butter")
-	
 func reduceButtonsOpacity():
 	match rightAnswer:
-		"Condensed Milk":
-			condensed_milk.modulate.a = 0.5
-		"Chocolate Powder":
-			chocolate_powder.modulate.a = 0.5
-		"Butter":
-			butter.modulate.a = 0.5
-		"Sugar":
-			sugar.modulate.a = 0.5
-		"Powdered Milk":
-			powdered_milk.modulate.a = 0.5
+		"Cake":
+			cake.modulate.a = 0.5
+		"Candle":
+			candle.modulate.a = 0.5
+		"Egg":
+			egg.modulate.a = 0.5
+		"Flour":
+			flour.modulate.a = 0.5
+		"Milk":
+			milk.modulate.a = 0.5
 
 func selectItem(elementSelected: TextureButton):
 	var texture = elementSelected.name + "_selected"
@@ -136,3 +125,15 @@ func getCurrentSelectedTextureButton():
 
 func selectItemByIndex():
 	selectItem(textureButtonList[selectedItem])
+
+
+func _on_cake_pressed():
+	checkAnswer("Cake")
+func _on_candle_pressed():
+	checkAnswer("Candle")
+func _on_egg_pressed():
+	checkAnswer("Egg")
+func _on_flour_pressed():
+	checkAnswer("Flour")
+func _on_milk_pressed():
+	checkAnswer("Milk")

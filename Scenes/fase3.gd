@@ -1,10 +1,10 @@
 extends Node2D
 
-@onready var cake = $"Cake"
-@onready var candle = $"Candle"
-@onready var egg = $Egg
-@onready var flour = $Flour
-@onready var milk = $"Milk"
+@onready var Cake = $"Cake"
+@onready var Candle = $"Candle"
+@onready var Egg = $Egg
+@onready var Flour = $Flour
+@onready var Milk = $"Milk"
 @onready var texture_rect = $MarginContainer/TextureRect
 @onready var right_answer_sound = $"Right Answer Sound"
 @onready var wrong_answer_sound = $"Wrong Answer Sound"
@@ -14,14 +14,14 @@ extends Node2D
 
 var mainSongPlaying = false
 var textureButtonList = []
-var listObjects = ["Cake","Candle","Egg","Flour","Milk"]
+var listObjects = ["Cake","Egg","Candle","Flour","Milk"]
 var objects = listObjects.duplicate()
 var answer = ""
 var lives = 3
 var rightAnswer = ""
 var red = Color(1.0,0.0,0.0,1.0) 
 var green = Color(0.0,1.0,0.0,1.0)
-var selectedItem = 2
+var selectedItem = 0
 
 func _ready():
 	print(GlobalTexts.lifes)
@@ -35,7 +35,7 @@ func _ready():
 	if !mainSongPlaying:
 		# background_music.play()
 		mainSongPlaying = true 
-	textureButtonList = [cake,candle,egg,flour,milk]
+	textureButtonList = [Cake,Egg,Candle,Flour,Milk]
 	reduceButtonsOpacity()
 	texture_rect.modulate.a = 0.5
 	randomize()
@@ -77,29 +77,30 @@ func checkAnswer(guess):
 func reduceButtonsOpacity():
 	match rightAnswer:
 		"Cake":
-			cake.modulate.a = 0.5
+			Cake.modulate.a = 0.5
 		"Candle":
-			candle.modulate.a = 0.5
+			Candle.modulate.a = 0.5
 		"Egg":
-			egg.modulate.a = 0.5
+			Egg.modulate.a = 0.5
 		"Flour":
-			flour.modulate.a = 0.5
+			Flour.modulate.a = 0.5
 		"Milk":
-			milk.modulate.a = 0.5
+			Milk.modulate.a = 0.5
 
 func selectItem(elementSelected: TextureButton):
 	var texture = elementSelected.name + "_selected"
 	print(texture)
-	var texturePath = "res://Assets/Fase 2/" + texture + ".png"
+	var texturePath = "res://Assets/Fase 3/" + texture + ".png"
 	elementSelected.texture_normal = ResourceLoader.load(texturePath)
 
 func unselectItem(elementSelected: TextureButton):
 	var texture = elementSelected.name 
 	print(texture)
-	var texturePath = "res://Assets/Fase 2/" + texture + ".png"
+	var texturePath = "res://Assets/Fase 3/" + texture + ".png"
 	elementSelected.texture_normal = ResourceLoader.load(texturePath)
 
 func _input(ev):
+	print("select_item: ",selectedItem)
 	if Input.is_key_pressed(KEY_RIGHT):
 		var selectedItemTexture = getCurrentSelectedTextureButton()
 		unselectItem(selectedItemTexture)
@@ -128,12 +129,17 @@ func selectItemByIndex():
 
 
 func _on_cake_pressed():
+	print("cake pressed")
 	checkAnswer("Cake")
 func _on_candle_pressed():
+	print("candle pressed")	
 	checkAnswer("Candle")
 func _on_egg_pressed():
+	print("egg pressed")		
 	checkAnswer("Egg")
 func _on_flour_pressed():
+	print("flour pressed")		
 	checkAnswer("Flour")
 func _on_milk_pressed():
+	print("milk pressed")		
 	checkAnswer("Milk")

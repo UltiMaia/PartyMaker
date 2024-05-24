@@ -1,12 +1,14 @@
-[gd_scene load_steps=15 format=3 uid="uid://dgobs8s16yisq"]
+[gd_scene load_steps=17 format=3 uid="uid://dgobs8s16yisq"]
 
 [ext_resource type="Script" path="res://Scenes/fase3.gd" id="1_odsrc"]
 [ext_resource type="Texture2D" uid="uid://bdb3sxqi5q54q" path="res://Assets/Assets_cenario/scenario3.png" id="2_trnql"]
 [ext_resource type="FontFile" uid="uid://ch103gi2tob72" path="res://Font/font/andina.ttf" id="3_v5ssa"]
 [ext_resource type="Texture2D" uid="uid://buh2nhjkuhspy" path="res://Assets/Fase 3/Cake.png" id="6_cksrh"]
 [ext_resource type="Texture2D" uid="uid://bxvqxqj2145o4" path="res://Assets/Fase 3/Candle.png" id="7_yd2ol"]
+[ext_resource type="Texture2D" uid="uid://mfk0y6o3qn2y" path="res://Assets/Fase 3/Cake_selected.png" id="8_22wrb"]
 [ext_resource type="Texture2D" uid="uid://bj1kq0nj7fm5a" path="res://Assets/Fase 3/Egg.png" id="8_jfbom"]
 [ext_resource type="Texture2D" uid="uid://dp07qs5a621e7" path="res://Assets/Fase 3/Flour.png" id="9_7jjas"]
+[ext_resource type="Texture2D" uid="uid://da53tkamb2vn7" path="res://Assets/Fase 3/Candle_selected.png" id="9_jgqk1"]
 [ext_resource type="Texture2D" uid="uid://r3vi75pjph1o" path="res://Assets/Fase 3/Milk.png" id="10_frnta"]
 [ext_resource type="Texture2D" uid="uid://h8ijjoy86bbi" path="res://Assets/Fase 3/Egg_selected.png" id="10_wt1b1"]
 [ext_resource type="Texture2D" uid="uid://dk2x75rg53jgg" path="res://Assets/Fase 3/Flour_selected.png" id="12_dh8vr"]
@@ -90,7 +92,7 @@ offset_top = 320.0
 offset_right = 308.0
 offset_bottom = 522.0
 texture_normal = ExtResource("6_cksrh")
-texture_pressed = ExtResource("6_cksrh")
+texture_pressed = ExtResource("8_22wrb")
 texture_hover = ExtResource("6_cksrh")
 texture_disabled = ExtResource("6_cksrh")
 texture_focused = ExtResource("6_cksrh")
@@ -103,6 +105,10 @@ offset_top = 280.0
 offset_right = 697.0
 offset_bottom = 537.0
 texture_normal = ExtResource("7_yd2ol")
+texture_pressed = ExtResource("9_jgqk1")
+texture_hover = ExtResource("7_yd2ol")
+texture_disabled = ExtResource("7_yd2ol")
+texture_focused = ExtResource("9_jgqk1")
 stretch_mode = 5
 
 [node name="Egg" type="TextureButton" parent="."]

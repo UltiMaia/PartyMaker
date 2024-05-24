@@ -48,9 +48,20 @@ text = "NORMAL"
 
 [node name="Hard" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_fonts/font = ExtResource("4_0erse")
 theme_override_font_sizes/font_size = 35
 text = "DIFICIL"
 
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 0.706
+autostart = true
+
+[connection signal="focus_entered" from="VBoxContainer/Normal" to="." method="_on_normal_focus_entered"]
+[connection signal="mouse_entered" from="VBoxContainer/Normal" to="." method="_on_normal_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/Normal" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/Hard" to="." method="_on_hard_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/Hard" to="." method="_on_button_2_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
